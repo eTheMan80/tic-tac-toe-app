@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+import Game from "./components/Game"
+import "./App.css"
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Box sx={{ width: "100%", textAlign: "center", margin: "36px 0 0" }}>
+        <Typography variant="h2" component="h1">
+          Tic Tac Toe
+        </Typography>
+      </Box>
+      <Box sx={{ width: "100%", textAlign: "center", margin: "36px 0" }}>
+        <Typography variant="h5" component="p">
+          Click on the squares to play the game!
+        </Typography>
+      </Box>
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Game />
+      </Box>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
